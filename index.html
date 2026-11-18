@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kedai Kopi Senja Nusantara</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <a class="brand" href="#beranda">Senja Nusantara</a>
+    <nav id="menu-nav" aria-label="Navigasi utama">
+      <ul class="nav-list">
+        <li><a href="#beranda">Beranda</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#pesan">Pesan</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+      </ul>
+    </nav>
+    <button type="button" id="tombol-tema" class="btn-secondary" aria-label="Aktifkan mode gelap">&#9790;</button>
+    <button type="button" id="tombol-menu" class="hamburger" aria-label="Buka menu" aria-expanded="false" aria-controls="menu-nav">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+    <!-- A4: Beranda -->
+    <section id="beranda" class="hero">
+      <p class="lencana-hero">Kopi &middot; Roti &middot; Senja</p>
+      <h1>Kedai Kopi Senja Nusantara</h1>
+      <p class="slogan">Hangat di setiap tegukan</p>
+      <p id="status-buka" class="status-buka">Memeriksa jam buka...</p>
+      <a class="btn-primary" href="#menu">Pesan sekarang</a>
+    </section>
+
+    <!-- A5: Profil dan jam buka -->
+    <section id="profil" class="blok">
+      <h2 class="judul-tengah">Profil dan Jam Buka</h2>
+      <p class="sub judul-tengah">Kedai kecil milik Bu Sari di Yogyakarta. Kopi, teh, dan camilan hangat untuk menemani senja Anda.</p>
+      <div class="tabel-wrap">
+        <table class="tabel-jam">
+          <caption>Jam buka Kedai Kopi Senja Nusantara</caption>
+          <thead>
+            <tr><th scope="col">Hari</th><th scope="col">Buka</th><th scope="col">Tutup</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Senin - Jumat</th><td>08.00</td><td>22.00</td></tr>
+            <tr><th scope="row">Sabtu - Minggu</th><td>07.00</td><td>23.00</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <div class="layout">
+      <!-- A6: Daftar menu -->
+      <section id="menu" class="blok">
+        <div class="kepala-menu">
+          <div>
+            <h2>Menu Kami</h2>
+            <p class="sub">Pilih favoritmu, tambahkan ke keranjang.</p>
+          </div>
+          <div class="filter" role="group" aria-label="Filter kategori">
+            <button type="button" class="btn-filter active" data-filter="Semua">Semua</button>
+            <button type="button" class="btn-filter" data-filter="Minuman">Minuman</button>
+            <button type="button" class="btn-filter" data-filter="Makanan">Makanan</button>
+          </div>
+        </div>
+        <div class="toolbar">
+          <label for="cari" class="sr-only">Cari menu</label>
+          <input type="search" id="cari" placeholder="Cari menu, misalnya kopi">
+        </div>
+
+        <div class="menu-grid" id="menu-grid">
+          <article class="card" data-kode="K01" data-kategori="Minuman" data-harga="18000">
+            <img src="img/K01.jpg" alt="Segelas Kopi Susu Senja dengan gula aren" width="400" height="260">
+            <div class="card-body">
+              <p class="kategori">Minuman</p>
+              <h3>Kopi Susu Senja</h3>
+              <p class="deskripsi">Espresso, susu segar, gula aren</p>
+              <div class="card-footer">
+                <p class="harga">Rp 18.000</p>
+                <button type="button" class="btn-primary btn-tambah">Tambah</button>
+              </div>
+            </div>
+          </article>
+          <article class="card" data-kode="K02" data-kategori="Minuman" data-harga="15000">
+            <img src="img/K02.jpg" alt="Secangkir Americano panas" width="400" height="260">
+            <div class="card-body">
+              <p class="kategori">Minuman</p>
+              <h3>Americano</h3>
+              <p class="deskripsi">Espresso dengan air panas</p>
+              <div class="card-footer">
+                <p class="harga">Rp 15.000</p>
+                <button type="button" class="btn-primary btn-tambah">Tambah</button>
+              </div>
+            </div>
+          </article>
+          <article class="card" data-kode="K03" data-kategori="Minuman" data-harga="20000">
+            <img src="img/K03.jpg" alt="Es Kopi Aren dalam gelas bening" width="400" height="260">
+            <div class="card-body">
+              <p class="kategori">Minuman</p>
+              <h3>Es Kopi Aren</h3>
+              <p class="deskripsi">Kopi dingin dengan gula aren cair</p>
+              <div class="card-footer">
+                <p class="harga">Rp 20.000</p>
+                <button type="button" class="btn-primary btn-tambah">Tambah</button>
+              </div>
+            </div>
+          </article>
+          <article class="card" data-kode="K04" data-kategori="Minuman" data-harga="14000">
+            <img src="img/K04.jpg" alt="Segelas Teh Tarik berbusa" width="400" height="260">
+            <div class="card-body">
+              <p class="kategori">Minuman</p>
+              <h3>Teh Tarik</h3>
+              <p class="deskripsi">Teh pekat dengan susu kental</p>
+              <div class="card-footer">
+                <p class="harga">Rp 14.000</p>
+                <button type="button" class="btn-primary btn-tambah">Tambah</button>
+              </div>
+            </div>
+          </article>
+          <article class="card" data-kode="M01" data-kategori="Makanan" data-harga="16000">
+            <img src="img/M01.jpg" alt="Roti bakar cokelat dengan keju parut" width="400" height="260">
+            <div class="card-body">
+              <p class="kategori">Makanan</p>
+              <h3>Roti Bakar Cokelat</h3>
+              <p class="deskripsi">Roti tebal, cokelat, keju parut</p>
+              <div class="card-footer">
+                <p class="harga">Rp 16.000</p>
+                <button type="button" class="btn-primary btn-tambah">Tambah</button>
+              </div>
+            </div>
+          </article>
+          <article class="card" data-kode="M02" data-kategori="Makanan" data-harga="15000">
+            <img src="img/M02.jpg" alt="Pisang goreng disiram madu" width="400" height="260">
+            <div class="card-body">
+              <p class="kategori">Makanan</p>
+              <h3>Pisang Goreng Madu</h3>
+              <p class="deskripsi">Pisang kepok goreng dengan madu</p>
+              <div class="card-footer">
+                <p class="harga">Rp 15.000</p>
+                <button type="button" class="btn-primary btn-tambah">Tambah</button>
+              </div>
+            </div>
+          </article>
+          <article class="card" data-kode="M03" data-kategori="Makanan" data-harga="25000">
+            <img src="img/M03.jpg" alt="Sepiring Nasi Goreng Kampung dengan telur dan kerupuk" width="400" height="260">
+            <div class="card-body">
+              <p class="kategori">Makanan</p>
+              <h3>Nasi Goreng Kampung</h3>
+              <p class="deskripsi">Nasi goreng, telur, kerupuk</p>
+              <div class="card-footer">
+                <p class="harga">Rp 25.000</p>
+                <button type="button" class="btn-primary btn-tambah">Tambah</button>
+              </div>
+            </div>
+          </article>
+          <article class="card" data-kode="M04" data-kategori="Makanan" data-harga="17000">
+            <img src="img/M04.jpg" alt="Kentang goreng renyah dengan saus sambal" width="400" height="260">
+            <div class="card-body">
+              <p class="kategori">Makanan</p>
+              <h3>Kentang Goreng</h3>
+              <p class="deskripsi">Kentang renyah dengan saus sambal</p>
+              <div class="card-footer">
+                <p class="harga">Rp 17.000</p>
+                <button type="button" class="btn-primary btn-tambah">Tambah</button>
+              </div>
+            </div>
+          </article>
+        </div>
+        <p id="menu-kosong" class="kosong" hidden>Menu tidak ditemukan. Coba kata kunci lain.</p>
+      </section>
+
+      <!-- A8: Area keranjang -->
+      <section id="keranjang" class="blok panel-keranjang">
+        <div class="kepala-keranjang">
+          <h2>Keranjang</h2>
+          <span id="jumlah-item" class="lencana">0 item</span>
+        </div>
+        <p id="keranjang-kosong" class="kosong">Keranjang masih kosong</p>
+        <ul id="daftar-keranjang" class="daftar-keranjang"></ul>
+        <dl class="ringkasan">
+          <div><dt>Subtotal</dt><dd id="teks-subtotal">Rp 0</dd></div>
+          <div><dt>Diskon</dt><dd id="teks-diskon">Rp 0 (0%)</dd></div>
+          <div class="total"><dt>Total bayar</dt><dd id="teks-total">Rp 0</dd></div>
+        </dl>
+        <a href="#pesan" class="btn-primary btn-blok">Lanjut ke pemesanan</a>
+        <button type="button" id="tombol-kosongkan" class="btn-secondary">Kosongkan</button>
+      </section>
+    </div>
+
+    <!-- A9: Form pemesanan -->
+    <section id="pesan" class="blok">
+      <h2 class="judul-tengah">Pesan Sekarang</h2>
+      <p class="sub judul-tengah">Isi data berikut, pesananmu langsung kami siapkan.</p>
+      <form id="form-pesan" novalidate>
+        <div class="field">
+          <label for="nama">Nama</label>
+          <input type="text" id="nama" name="nama" autocomplete="name">
+          <span class="pesan-error" id="err-nama"></span>
+        </div>
+        <div class="field">
+          <label for="hp">Nomor HP</label>
+          <input type="tel" id="hp" name="hp" placeholder="08xxxxxxxxxx" autocomplete="tel">
+          <span class="pesan-error" id="err-hp"></span>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" autocomplete="email">
+          <span class="pesan-error" id="err-email"></span>
+        </div>
+        <fieldset class="field" id="grup-jenis">
+          <legend>Jenis pesanan</legend>
+          <label class="radio" for="jenis-dine"><input type="radio" id="jenis-dine" name="jenis" value="Makan di tempat"> Makan di tempat</label>
+          <label class="radio" for="jenis-bawa"><input type="radio" id="jenis-bawa" name="jenis" value="Bawa pulang"> Bawa pulang</label>
+          <span class="pesan-error" id="err-jenis"></span>
+        </fieldset>
+        <div class="field penuh">
+          <label for="tanggal">Tanggal ambil</label>
+          <input type="date" id="tanggal" name="tanggal">
+          <span class="pesan-error" id="err-tanggal"></span>
+        </div>
+        <div class="field penuh">
+          <label for="catatan">Catatan (opsional)</label>
+          <textarea id="catatan" name="catatan" rows="3"></textarea>
+        </div>
+        <p class="pesan-error" id="err-keranjang"></p>
+        <button type="submit" class="btn-primary btn-blok">Kirim pesanan</button>
+      </form>
+      <div id="konfirmasi" class="konfirmasi" aria-live="polite" hidden></div>
+    </section>
+  </main>
+
+  <!-- A10: Footer -->
+  <footer id="kontak" class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <p class="footer-brand">Kedai Kopi Senja Nusantara</p>
+        <p>Hangat di setiap tegukan</p>
+      </div>
+      <div>
+        <h2>Alamat</h2>
+        <address>Jl. Kaliurang Km 5 No. 12,<br>Yogyakarta</address>
+      </div>
+      <div>
+        <h2>Kontak</h2>
+        <address>
+          Telepon: <a href="tel:081234567890">0812-3456-7890</a><br>
+          Email: <a href="mailto:halo@senjanusantara.test">halo@senjanusantara.test</a>
+        </address>
+      </div>
+    </div>
+    <p class="hak-cipta"><small>&copy; 2026 Kedai Kopi Senja Nusantara. Hak cipta dilindungi.</small></p>
+  </footer>
+
+</body>
+</html>
